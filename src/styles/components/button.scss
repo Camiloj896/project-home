@@ -1,0 +1,25 @@
+@import './../base/global';
+
+.#{$prefix-template-name}-button {
+  &-primary {
+    color: $dark-purple;
+    background-color: $pear;
+    cursor: pointer;
+    font-family: $fmc-font;
+    font-weight: 900;
+  }
+
+  &-outline {
+    border: 1px solid $pear;
+    background-color: transparent;
+    color: $pear;
+    cursor: pointer;
+    font-family: $fmc-font;
+    font-weight: 900;
+
+    &:hover {
+      color: $dark-purple;
+      background-color: $pear;
+    }
+  }
+}

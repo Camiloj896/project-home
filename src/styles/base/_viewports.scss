@@ -1,0 +1,23 @@
+$breakpoints: (
+  md: '768px',
+  lg: '1024px',
+  xl: '1440px',
+);
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-landscape() {
+  @media screen and (pointer: coarse) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin only-mobile() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}

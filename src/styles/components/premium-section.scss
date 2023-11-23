@@ -1,0 +1,8 @@
+@import './../base/global';
+
+.#{$prefix-template-name}-premium-section {
+  background-color: #2b1645;
+  @include media-up(md) {
+    padding: 100px 0;
+  }
+}

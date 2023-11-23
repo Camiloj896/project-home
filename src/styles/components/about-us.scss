@@ -1,0 +1,7 @@
+@import './../base/global';
+
+.#{$prefix-template-name}-about-us {
+  @include media-up(md) {
+    margin: 100px 0;
+  }
+}

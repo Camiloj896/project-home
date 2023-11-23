@@ -1,0 +1,39 @@
+$prefix-template-name: 'fmc';
+
+// COLORS
+$taupe_gray: #92828d;
+$russian-violet: #2b1645;
+$dark-purple: #150b22;
+$mindaro: #eef89e;
+$pear: #d6ef19;
+$dark-Moss-green: #5c6611;
+$jasmine: #ffd972;
+$amber: #ffbf14;
+$field-drab: #574411;
+$sky-magenta: #dc75bc;
+$red-violet: #c51a8f;
+$tyrian-purple: #54113f;
+$white-smoke: #f0f0f0;
+$grey: #7a7a7a;
+$night: #0a0a0a;
+
+// BG
+$gradien-bg-dark: #150b22;
+$gradien-bg-light: #2b1645;
+
+$gradien-bg-linear: linear-gradient(
+  90deg,
+  $gradien-bg-light 0%,
+  $gradien-bg-dark 100%
+);
+
+$gradien-bg-radial: radial-gradient(
+  circle,
+  $gradien-bg-dark 0%,
+  $gradien-bg-light 100%
+);
+
+$gradien-bg-dark: #2b1645;
+
+// Text
+$fmc-font: RobotoMono, sans-serif;

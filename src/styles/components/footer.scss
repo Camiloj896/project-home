@@ -1,0 +1,8 @@
+@import './../base/global';
+
+.#{$prefix-template-name}-footer {
+  color: $white-smoke;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}

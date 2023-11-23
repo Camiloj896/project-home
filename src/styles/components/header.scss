@@ -1,0 +1,67 @@
+@import './../base/global';
+
+.#{$prefix-template-name}-header {
+  width: 100%;
+
+  &-mobile-panel {
+    background-color: #18082e;
+    z-index: 2;
+    width: 100%;
+  }
+
+  &_item {
+    color: $white-smoke;
+    display: block;
+    text-align: center;
+
+    &:hover {
+      border-bottom: 1px solid $pear;
+    }
+  }
+
+  &_item--current {
+    color: $pear;
+  }
+
+  &-sub-menu {
+    background-color: $dark-purple;
+    color: $pear;
+  }
+}
+
+.beta-label {
+  @include only-mobile() {
+    right: -45px;
+    color: white;
+    top: 0;
+    width: 45px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #d6ef19;
+    font-weight: 600;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include media-up(md) {
+    position: absolute;
+    bottom: -20px;
+    color: white;
+    left: 0;
+    width: 45px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #d6ef19;
+    font-weight: 600;
+  }
+}
+
+.scroll-mobile {
+  background-color: #18082e;
+
+  @include media-up(lg) {
+    height: 80px;
+  }
+}

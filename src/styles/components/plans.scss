@@ -1,0 +1,15 @@
+@import './../base/global';
+
+.#{$prefix-template-name}-plans {
+  
+  @include media-up(md) {
+    margin: 100px 0;
+  }
+
+  .cards {
+    border: 2px solid $dark-purple;
+    border-radius: 10px;
+    background-color: $russian-violet;
+    color: $white-smoke;
+  }
+}

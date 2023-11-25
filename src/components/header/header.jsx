@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { Link, useLocation } from "react-router-dom";
 
 import { Disclosure } from '@headlessui/react'
@@ -18,45 +17,18 @@ const navigation = [
   { name: 'Contacto', href: '/contact' },
 ]
 
-const Header = ({ className = '' }) => {
-  const [y, setY] = useState(0)
-
-  const handleNavigation = (e) => {
-    const window = e.currentTarget
-    setY(window.scrollY)
-  }
-
+const Header = () => {
   const pathname = useLocation()
 
   const CURRENT_PAGE = pathname
 
-  useEffect(() => {
-    setY(window.scrollY)
-
-    window.addEventListener('scroll', (e) => handleNavigation(e))
-
-    return () => {
-      window.removeEventListener('scroll', (e) => handleNavigation(e))
-    }
-  }, [])
-
-  const handleSignIn = () => {
-    
-  }
-
-  const handleSignOut = () => {
-    
-  }
-
   return (
     <>
-      <Disclosure as="nav" className="sticky top-0 z-10">
+      <Disclosure as="nav">
         {({ open }) => (
           <>
             <div
-              className={`${namespace} ${className} ${
-                y > 0 ? 'scroll-mobile' : ''
-              }`}
+              className={namespace}
             >
               <div className={`mx-auto max-w-7xl px-2 sm:px-6 lg:px-8`}>
                 <div className="relative flex h-16 items-center justify-between">

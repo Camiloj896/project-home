@@ -4,4 +4,12 @@
   @include media-up(md) {
     margin: 100px 0;
   }
+
+  @include media-landscape() {
+    margin: 0;
+
+    & > div:first-child {
+      padding-top: 80px;
+    }
+  }
 }

@@ -12,6 +12,14 @@
     height: 70vh;
   }
 
+  @include media-landscape() {
+    height: 95vh;
+
+    .banner-ls {
+      margin: 0 auto;
+    }
+  }
+
   &-bg-shadow {
     background-color: #170230d4;
     width: 100%;

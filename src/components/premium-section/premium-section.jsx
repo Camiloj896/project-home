@@ -10,7 +10,7 @@ const PremiumSection = () => (
     <div className="py-20 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 text-center">
       <div className="max-w-screen-md mb-8 lg:mb-16 sm:mx-auto">
         <h2 className="mb-10 text-4xl tracking-tight font-extrabold text-white">¿Por qué cambiarse a Premium?</h2>
-        <p className="text-gray-300 sm:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et elit dapibus, mollis eros non, condimentum nibh. Nullam sodales felis eget odio viverra pulvinar.</p>
+        <p className="text-gray-300 sm:text-xl">Con la suscripción premium de FMC, tu práctica no tiene límites de tiempo. Disfruta de acceso ilimitado a todas nuestras sesiones de práctica, sin restricciones temporales. Domina cada técnica, perfecciona tu estilo y sumérgete en el arte del freestyle sin preocuparte por el reloj. Con nuestra suscripción premium, tu progreso es tu prioridad, practica a tu ritmo y lleva tu habilidad al siguiente nivel, sin límites, sin interrupciones.</p>
       </div>
       <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
         {content.map((data) => (

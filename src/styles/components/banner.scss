@@ -1,0 +1,15 @@
+@import './../base/global';
+
+.#{$prefix-template-name}-banner {
+  text-align: center;
+  background-image: url('./../../assets/image/jen-theodore-aWmQE4CvXK0-unsplash.jpg');
+  background-size: cover;
+  background-repeat: round;
+
+  .bg-shadow-fmc {
+    background-color: #170230d4;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+  }
+}

@@ -3,6 +3,7 @@
 .#{$prefix-template-name}-home {
   opacity: 1;
   width: 100%;
+  background-color: $white-smoke;
 
   @include media-landscape() {
     .banner-ls {

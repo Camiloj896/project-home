@@ -1,9 +1,15 @@
 @import './../base/global';
 
 .#{$prefix-template-name}-plans {
+
+  color: $russian-violet;
   
   @include media-up(md) {
     margin: 100px 0;
+  }
+
+  h2 {
+    color: $dark-purple;
   }
 
   .cards {

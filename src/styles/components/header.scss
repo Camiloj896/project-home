@@ -13,9 +13,20 @@
     color: $white-smoke;
     display: block;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
       border-bottom: 1px solid $pear;
+    }
+
+    &--divider {
+      display: none;
+
+      @include media-up(lg) {
+        width: 1px;
+        background-color: $pear;
+        display: inline-block;
+      }
     }
   }
 

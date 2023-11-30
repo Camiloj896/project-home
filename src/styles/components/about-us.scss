@@ -1,6 +1,8 @@
 @import './../base/global';
 
 .#{$prefix-template-name}-about-us {
+  color: $russian-violet;
+
   @include media-up(md) {
     margin: 100px 0;
   }
@@ -11,5 +13,9 @@
     & > div:first-child {
       padding-top: 80px;
     }
+  }
+
+  h2 {
+    color: $dark-purple;
   }
 }

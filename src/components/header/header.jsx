@@ -4,7 +4,6 @@ import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import IconMenu from '../icons/menu'
-import LoginMenu from '../login-menu'
 
 import { NAMES_SPACE } from '../../utils/constans'
 
@@ -13,14 +12,26 @@ import '../../styles/components/header.scss'
 const namespace = `${NAMES_SPACE}-header`
 
 const navigation = [
-  { name: 'Inicio', href: '/' },
-  { name: 'Contacto', href: '/contact' },
+  { name: 'Premium', href: '?fmc-premium-section', internal: true, id: 'premium-section' },
+  { name: 'contacto', href: 'https://freestylemc.com/pub/contact', internal: false },
+  { divider: true },
+  { name: 'Registro', href: 'https://freestylemc.com/api/auth/signin', internal: false },
+  { name: 'Iniciar Sesion', href: 'https://freestylemc.com/api/auth/signin', internal: false },
 ]
 
 const Header = () => {
   const pathname = useLocation()
 
   const CURRENT_PAGE = pathname
+
+  const handleNavigation = (item) => {
+    if (item.internal) {
+      const element = document.getElementById(item.id);
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = item.href;
+    }
+  }
 
   return (
     <>
@@ -59,26 +70,26 @@ const Header = () => {
                       <span className="beta-label">BETA</span>
                     </Link>
                     <div className="hidden sm:ml-6 sm:block w-full">
-                      <div className="flex space-x-4 justify-center">
-                        {navigation.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.href}
-                            className={`${namespace}_item ${
-                              item.href === CURRENT_PAGE
-                                ? `${namespace}_item--current`
-                                : ''
-                            }`}
-                            aria-current={item.current ? 'page' : undefined}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
+                      <ul className="flex space-x-4 justify-end">
+                        {navigation.map((item) => {
+                          return item?.divider ? (
+                            <li className={`${namespace}_item--divider`}></li>
+                          ) : (
+                            <li
+                              key={item.name}
+                              onClick={() => handleNavigation(item)}
+                              className={`${namespace}_item ${
+                                item.href === CURRENT_PAGE
+                                  ? `${namespace}_item--current`
+                                  : ''
+                              }`}
+                            >
+                              {item.name}
+                            </li>
+                          )
+                        })}
+                      </ul>
                     </div>
-                  </div>
-                  <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <LoginMenu />
                   </div>
                 </div>
               </div>

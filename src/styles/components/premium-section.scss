@@ -1,8 +1,13 @@
 @import './../base/global';
 
 .#{$prefix-template-name}-premium-section {
-  background-color: #2b1645;
+  background-color: $russian-violet;
   @include media-up(md) {
     padding: 100px 0;
+  }
+
+  svg {
+    fill: $russian-violet;
+    width: 50px;
   }
 }
